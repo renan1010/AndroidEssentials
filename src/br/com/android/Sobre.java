@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.TextView;
- 
+//comentario 
 public class Sobre extends Activity {
    @Override
    protected void onCreate(Bundle savedInstanceState) {
