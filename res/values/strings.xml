@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="hello">Bem Vindo, Funcionou Renan</string>
+    <string name="app_name">Music ReeH</string>
+    <string name="titulo">Music ReeH</string>
+    <string name="play_label">Tocar</string>
+    <string name="sobre_label">Sobre</string>
+    <string name="sair_label">Sair</string>
+    <string name="sobre_title">Sobre o Programa Music Reeh</string>
+    <string name="sobre_texto">Programa Feito Por Renan Vicente, para tocar Musicas</string>
+    <string name="configs_label">Configurações</string>
+    <string name="configs_title">Configuraçõess do programa</string>
+    <string name="configs_atalhos">s</string>
+    <string name="musica_title">Música</string>
+    <string name="musica_summary">Tocar música de fundo</string>
+    <string name="hints_title">Hints</string>
+    <string name="hints_summary">Exibir hints durente a música</string>
+    <string name="play_title">Músicas</string>
+    <string name="m1_label">Creed - My One Last</string>
+    <string name="m2_label">Creed - My Sacrifice</string>
+    <string name="m3_label">Creed - whith arms wide open</string>
+    <string name="m4_label">Requiem For A Dream</string>
+</resources>

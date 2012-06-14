@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 	xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="fill_parent"
+			  	android:layout_height="fill_parent"
+			  	android:padding="30dip"
+			  	android:orientation="horizontal">
+			  	
+<LinearLayout	android:orientation="vertical"
+      			android:layout_height="wrap_content"
+      			android:layout_width="fill_parent"
+      			android:layout_gravity="center">
+      			
+<TextView 		android:id="@+id/titulo"
+    			android:text="@string/titulo"
+    	 		android:layout_width="wrap_content"
+    	 		android:layout_height="wrap_content"
+    	 		android:layout_gravity="center"
+    	 		android:layout_marginBottom="25dip"
+         		android:textSize="22.5sp" />
+
+<Button 		android:id="@+id/play_button"
+			    android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:text="@string/play_label" />
+
+<Button android:id="@+id/sobre_button"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:text="@string/sobre_label" />
+
+<Button
+    android:id="@+id/parar_buttom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Parar" />
+
+<Button android:id="@+id/sair_button"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:text="@string/sair_label" />
+</LinearLayout>
+</LinearLayout>

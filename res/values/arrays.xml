@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <array name="musicas">
+      <item>@string/m1_label</item>
+      <item>@string/m2_label</item>
+      <item>@string/m3_label</item>
+      <item>@string/m4_label</item>
+   </array>
+</resources>
