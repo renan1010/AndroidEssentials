@@ -2,6 +2,10 @@ package br.com.	android;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -15,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MyFirstProgramActivity extends Activity implements OnClickListener {
     /** Called when the activity is first created. */
@@ -42,8 +47,29 @@ public class MyFirstProgramActivity extends Activity implements OnClickListener 
         pararButton.setOnClickListener(this);
         //para utilizar o botao de volume
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
-        //Inicializa o Aplicativo tocando a musica do requiem
-        tocarMusica(3);
+        //1- Obtemos uma referencia ao NotificationManager do Android
+        String ns = Context.NOTIFICATION_SERVICE;
+        NotificationManager mNotificationManager = (NotificationManager)
+        getSystemService(ns);
+      //2- Vamos criar a notificação, damos a ela um ícone, um título e damos a hora em que a notificação ocorreu
+        int icon = R.drawable.ic_launcher;
+        CharSequence tickerText = "MusicReeH";
+        long when = System.currentTimeMillis();
+        Notification notification = new Notification(icon, tickerText, when);
+        Context context = getApplicationContext();
+        CharSequence contentTitle = "MusicReeH";
+        CharSequence contentText = "Voce acaba de inicializar o aplicativo MusicReeH";
+        //4- criamos os Intents de comunicação da notificação
+        Intent notificationIntent = new Intent(this,
+       	        MyFirstProgramActivity.class);
+       	        PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
+       	        notificationIntent, 0);
+       	        notification.setLatestEventInfo(context, contentTitle, contentText,
+       	        contentIntent);
+       	        //4 - Enviamos a notificação
+       	        final int NOTIFICACAO_ID = 1;
+       	        mNotificationManager.notify(NOTIFICACAO_ID, notification);
+ 
     }
 	
 	//Metodo para abrir o menu do tocar
@@ -63,14 +89,10 @@ public class MyFirstProgramActivity extends Activity implements OnClickListener 
 			   switch (i) {
 			      case 0:
 			         resId = R.raw.m1;
+			         
 			         break;
 			      case 1:
 			         resId = R.raw.m2;
-			         break;
-			      case 2:
-			         resId = R.raw.m3;
-			      case 3:
-			    	  resId = R.raw.m4;
 			         break;
 			   }
 			 
@@ -86,14 +108,28 @@ public class MyFirstProgramActivity extends Activity implements OnClickListener 
  	   switch (v.getId()) {
  	  case R.id.play_button:
  		   abrirMenuTocar();
+ 		  Context context2 = getApplicationContext();
+  		 CharSequence text2 = "Escolha uma musica!";
+  		 int duration2 = Toast.LENGTH_SHORT;
+  		 Toast toast2 = Toast.makeText(context2, text2, duration2);
+  		 toast2.show();
  		break;
  	   case R.id.sobre_button:
  	      Intent i = new Intent(this, Sobre.class);
  	      startActivity(i);
+ 	      abrirMenuTocar();
  	   case R.id.parar_buttom:
+ 		  Context context = getApplicationContext();
+ 		 CharSequence text = "Voce acaba de parar a musica!";
+ 		 int duration = Toast.LENGTH_SHORT;
+ 		 Toast toast = Toast.makeText(context, text, duration);
+ 		 toast.show();
+
  		   	mp.stop();
  			   onDestroy();
  	   case R.id.sair_button:
+ 		   mp.stop();
+ 		   onDestroy();
  		   finish();
  		   break;
  	   }

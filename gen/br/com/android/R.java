@@ -9,28 +9,35 @@ package br.com.android;
 
 public final class R {
     public static final class array {
+        public static final int formatos_arquivos=0x7f060001;
         public static final int musicas=0x7f060000;
     }
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int mapa=0x7f020001;
-        public static final int music=0x7f020002;
-        public static final int music1=0x7f020003;
+        public static final int gradient_bg=0x7f020000;
+        public static final int gradient_bg_hover=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int list_selector=0x7f020003;
+        public static final int mapa=0x7f020004;
+        public static final int music=0x7f020005;
+        public static final int music1=0x7f020006;
     }
     public static final class id {
         public static final int parar_buttom=0x7f0a0003;
         public static final int play_button=0x7f0a0001;
         public static final int sair_button=0x7f0a0004;
-        public static final int settings=0x7f0a0006;
+        public static final int settings=0x7f0a0007;
         public static final int sobre_button=0x7f0a0002;
-        public static final int sobre_conteudo=0x7f0a0005;
+        public static final int sobre_conteudo=0x7f0a0006;
+        public static final int songTitle=0x7f0a0005;
         public static final int titulo=0x7f0a0000;
     }
     public static final class layout {
         public static final int main=0x7f030000;
-        public static final int sobre=0x7f030001;
+        public static final int playlist=0x7f030001;
+        public static final int playlist_item=0x7f030002;
+        public static final int sobre=0x7f030003;
     }
     public static final class menu {
         public static final int menu=0x7f090000;
